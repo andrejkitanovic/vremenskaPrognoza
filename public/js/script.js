@@ -13,7 +13,7 @@ vremeForma.addEventListener('submit', e => {
 
     greskaPoruka.innerHTML = 'Loading...';
 
-    fetch(`http://localhost:3000/weather?adresa=${lokacija}`).then(response => {
+    fetch(`/weather?adresa=${lokacija}`).then(response => {
         response.json().then(data => {
             if (data.greska) {
                 greskaPoruka.innerHTML = data.greska;
