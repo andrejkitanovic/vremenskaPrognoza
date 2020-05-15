@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        {{>header}}
+
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ime grada" id="ime-grada">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary">Pretrazi</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="greska">
+            <p class="greska-tekst"></p>
+        </div>
+
+        <div class="kartice">
+            {{!-- <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title prikaz-grad"></h5>
+                    <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item prikaz-temperatura"></li>
+                    <li class="list-group-item prikaz-pritisak"></li>
+                    <li class="list-group-item prikaz-vetar"></li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link zatvori-karticu">Zatvori karticu</a>
+                </div>
+            </div> --}}
+        </div>
+
+
+
+        {{>footer}}
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body{
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+header h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a{
+    color:#888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.robot{
+    width:250px;
+}
+
+footer{
+    color:#AAA;
+    border-top: 2px solid #eee;
+    margin-top:20px;
+}
+
+.naslov{
+    text-align: center;
+    margin: 5% 0;
+}
+
+.kartice{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    margin-right:20px;
+    margin-bottom: 20px;
+    animation: example 2s 1;
+}
+
+.greska{
+   height: 30px;
+}
+
+@keyframes example{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
