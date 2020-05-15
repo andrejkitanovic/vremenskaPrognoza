@@ -104,3 +104,5 @@ app.get('*', (req, res) => {
 app.listen(3000, () => {
     console.log('Server radi na portu 3000')
 })
+
+console.log('a')
