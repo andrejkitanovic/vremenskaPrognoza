@@ -12,6 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, {
                 temperatura: kelvinToCelsius(body.main.temp),
                 pritisak: body.main.pressure,
+                vlaznost:body.main.humidity,
                 vetar:body.wind.speed
             });
         }

@@ -44,30 +44,31 @@ app.get('/pomoc', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-    if(!req.query.adresa){
+    if (!req.query.adresa) {
         return res.send({
-            greska:'Niste uneli grad'
+            greska: 'Niste uneli grad'
         })
     }
 
     geoCode(req.query.adresa, (error, { latitude, longitude, location } = {}) => {
         if (error) {
             return res.send({
-                greska:error
+                greska: error
             })
         }
 
-        forecast(latitude, longitude, (error, { temperatura, pritisak, vetar }) => {
+        forecast(latitude, longitude, (error, { temperatura, pritisak, vlaznost, vetar }) => {
             if (error) {
                 return res.send({
-                    greska:error
+                    greska: error
                 })
             }
 
             return res.send({
-                grad:location,
+                grad: location,
                 temperatura,
                 pritisak,
+                vlaznost,
                 vetar
             })
 
